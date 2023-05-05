@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Watch Spot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1/modern-normalize.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
 
+</head>
+<body>
+  <header class="top-header">
+    <div class="header-container container">
+      <div class="logo-wrap">
+        <svg class="mobile-logo" width="42" height="42">
+          <use href="./images/icons.svg#icon-logo"></use>
+        </svg>
+        <p class="logo">thewatchspot</p>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav-menu list">
+          <li class="main-nav-item"><a class="main-nav-link link" href="#about">About us</a></li>
+          <li class="main-nav-item"><a class="main-nav-link link" href="#catalog">Catalog</a></li>
+          <li class="main-nav-item"><a class="main-nav-link link" href="#sale">Sale</a></li>  
+        </ul>
+      </nav>
+      <a class="contact-link" href="tel:+380(68)443-94-26">+380 (68) 443-94-26</a>
+      <button class="mobile-menu-btn" data-menu-open type="button">
+        <svg class="mobile-menu-pic" width="24" height="24">
+          <use href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+  </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="mobile-modal appear" data-menu>
+            <div class="logo-wrap">
+              <svg class="mobile-logo" width="42" height="42">
+                <use href="./images/icons.svg#icon-logo"></use>
+              </svg>
+              <p class="logo">thewatchspot</p>
+            </div>
+            <button type="button" class="mobile-close-button btns" data-menu-close>
+              <svg class="close-button" width="24" height="24">
+                <use href="./images/icons.svg#icon-x"></use>
+              </svg>
+            </button>
+            <nav>
+              <ul class="mobile-nav-menu list">
+                  <li class="mobile-nav-item"><a class="mobile-nav-link link" href="#about">About us</a></li>
+                  <li class="mobile-nav-item"><a class="mobile-nav-link link" href="#catalog">Catalog</a></li>
+                  <li class="mobile-nav-item"><a class="mobile-nav-link link" href="#sale">Sale</a></li>
+              </ul>
+            </nav>
+          </div>
+          <h1 class="main-header">Welcome to our collection of premium watches</h1>
+          <div class="swiper-text-wrap">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/swipe-watch1.jpg" alt="#">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/swipe-watch2.jpg" alt="#">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/swipe-watch3.jpg" alt="#">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/swipe-watch4.jpg" alt="#">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/swipe-watch5.jpg" alt="#">
+                </div>
+              </div>
+              <div class="swiper-buttons">
+                <div class="button-prev">
+                  <p class="chevron-icon">&lt</p>
+                  <!-- <svg class="chevron-icon" width="18" height="18">
+                    <use href="./images/icons.svg#icon-chevron-right"></use>
+                  </svg> -->
+                </div>
+                <div class="button-next">
+                  <p class="chevron-icon">&gt</p>
+                  <!-- <svg class="chevron-icon" width="18" height="18">
+                    <use href="./images/icons.svg#icon-chevron-left"></use>
+                  </svg> -->
+                </div>
+                <div class="swap-numbers-wrap">
+                  <p class="swipe-numbers">01</p>
+                  <p class="swipe-numbers">05</p>
+                </div>
+              </div>
+            </div>
+            <div class="hero-text-wrap">
+              <p class="hero-text">Our watches are not just timepieces, but also an expression of your personality and lifestyle. From classic designs to modern ones, we have a watch to suit every taste and occasion.</p>
+            </div>
+          </div>
+          <div class="hero-pic-wrap">
+            <img src="./images/Hero-pict.jpg" alt="watches on hand" width="335" height="410">
+          </div>
+        </div>
+        
+      </section>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper(".mySwiper", {
+slidesPerView: 1,
+spaceBetween: 10,
+loop: true,
+keyboard: {
+enabled: true,
+},
+navigation: {
+nextEl: ".button-next",
+prevEl: ".button-prev",
+},
+});
+</script>
+<script src="./js/mobile-menu.js"></script>
+<script src="./js/modal.js"></script>
+</body>
+</html>
